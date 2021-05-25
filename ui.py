@@ -22,7 +22,7 @@ class Example(QWidget):
         vbox = QVBoxLayout()
         vbox.addLayout(hbox)
         self.setLayout(vbox)
-        self.setGeometry(300, 300, 350, 300)
+        self.setGeometry(300, 300, 450, 300)
         self.setWindowTitle("青年大学习获取未学习名单")
         self.setWindowIcon(QIcon("head.ico"))
         self.show()
@@ -34,11 +34,9 @@ class Example(QWidget):
         if fname[0]:
             # 打开第一个文件
             f = open(fname[0], "r")
-            print(f.name)
             mylist = main.getnostudytxt(f.name)
-            print(mylist)
             for i in mylist:
-                self.textEdit.append(i)
+                self.textEdit.append(i['name']+'  '+i['no'])
 
 
 if __name__ == "__main__":

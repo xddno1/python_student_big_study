@@ -7,7 +7,6 @@
 
 - python的模块化
 - pyqt5做一个简单的界面
-
 - openpyxl库对xlsx文件进行操作
 - Pyinstaller库对ui.py文件进行打包
 - Pyinstaller -F -w ui.py 语句打包
